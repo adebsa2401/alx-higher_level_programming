@@ -28,8 +28,8 @@ def roman_to_int(roman_string):
     num = 0
 
     for i, roman in enumerate(roman_string):
-        if (i != (len(roman_string) - 1) and
-                roman_dict[roman] < roman_dict[roman_string[i + 1]]):
+        if i != (len(roman_string) - 1):
+            if roman_dict[roman] < roman_dict[roman_string[i + 1]]:
                 num -= roman_dict[roman]
         else:
             num += roman_dict[roman]
