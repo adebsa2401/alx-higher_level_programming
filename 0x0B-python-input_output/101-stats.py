@@ -53,6 +53,5 @@ if __name__ == "__main__":
 
         print_stats(size, status_codes)
 
-    except KeyboardInterrupt as e:
+    except KeyboardInterrupt:
         print_stats(size, status_codes)
-        raise e
